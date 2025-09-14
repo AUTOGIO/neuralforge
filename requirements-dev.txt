@@ -1,0 +1,59 @@
+# Development dependencies for NEURAL_CORE_VAULT
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-mock>=3.10.0
+pytest-benchmark>=4.0.0
+
+# Code Quality
+black>=22.0.0
+flake8>=5.0.0
+mypy>=1.0.0
+isort>=5.10.0
+pre-commit>=2.20.0
+
+# Security
+bandit>=1.7.0
+safety>=2.0.0
+
+# Documentation
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.0.0
+mkdocs>=1.4.0
+mkdocs-material>=8.0.0
+
+# Performance & Profiling
+memory-profiler>=0.60.0
+line-profiler>=4.0.0
+py-spy>=0.3.0
+
+# Build & Packaging
+build>=0.8.0
+twine>=4.0.0
+wheel>=0.37.0
+
+# Development Tools
+ipython>=8.0.0
+jupyter>=1.0.0
+rich>=12.0.0
+
+# Database Development
+psycopg2-binary>=2.9.0
+sqlalchemy>=1.4.0  # For potential ORM features
+
+# Additional Testing
+httpx>=0.24.0  # For async testing
+respx>=0.20.0  # HTTP mocking
+factory-boy>=3.2.0  # Test data generation
+
+# Linting Extensions
+flake8-docstrings>=1.6.0
+flake8-import-order>=0.18.0
+flake8-bugbear>=22.0.0
+flake8-comprehensions>=3.10.0
+
+# Type Checking Extensions  
+types-requests>=2.28.0
+types-beautifulsoup4>=4.11.0
+types-psycopg2>=2.9.0

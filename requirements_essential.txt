@@ -1,0 +1,16 @@
+# Essential Dependencies Only
+rich>=13.0.0
+psycopg2-binary>=2.9.0
+psutil>=5.9.0
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+lxml>=4.9.0
+
+# Testing
+pytest>=7.0.0
+
+# Optional - Install separately if needed
+# torch>=2.0.0
+# wxPython>=4.2.0  
+# PyQt5>=5.15.0
+# coremltools>=7.0.0
