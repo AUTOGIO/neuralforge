@@ -15,6 +15,7 @@ class NeuralVaultLauncher:
         self.core_dir = self.project_root / "core"
         self.ai_dir = self.project_root / "ai"
         self.web_dir = self.project_root / "web"
+        self.automation_dir = self.project_root / "automation"
         
     def show_banner(self):
         """Display the project banner"""
@@ -33,8 +34,10 @@ class NeuralVaultLauncher:
         print("3. 🔧 Core ML Integration")
         print("4. 💾 AI Memory System")
         print("5. 🌐 Web Scraper")
-        print("6. 🧪 Run All Tests")
-        print("7. 📊 Project Status")
+        print("6. 📧 Email Automation")
+        print("7. ⏰ Schedule Automation")
+        print("8. 🧪 Run All Tests")
+        print("9. 📊 Project Status")
         print("0. 🚪 Exit")
         
     def launch_neural_monitor(self):
@@ -97,6 +100,30 @@ class NeuralVaultLauncher:
         else:
             print("❌ Web scraper script not found")
             
+    def launch_email_automation(self):
+        """Launch the email automation tool"""
+        print("\n📧 Launching Email Automation...")
+        script_path = self.automation_dir / "email_automation.py"
+        if script_path.exists():
+            try:
+                subprocess.run([sys.executable, str(script_path)], check=True)
+            except subprocess.CalledProcessError:
+                print("❌ Email automation failed to start")
+        else:
+            print("❌ Email automation script not found")
+            
+    def launch_schedule_automation(self):
+        """Launch the schedule automation tool"""
+        print("\n⏰ Launching Schedule Automation...")
+        script_path = self.automation_dir / "schedule_automation.py"
+        if script_path.exists():
+            try:
+                subprocess.run([sys.executable, str(script_path)], check=True)
+            except subprocess.CalledProcessError:
+                print("❌ Schedule automation failed to start")
+        else:
+            print("❌ Schedule automation script not found")
+            
     def run_tests(self):
         """Run the test suite"""
         print("\n🧪 Running Test Suite...")
@@ -133,6 +160,13 @@ class NeuralVaultLauncher:
             status = "✅" if path.exists() else "❌"
             print(f"   {status} {tool}")
             
+        # Check automation tools
+        print("\n🤖 Automation Tools:")
+        for tool in ["email_automation.py", "schedule_automation.py"]:
+            path = self.automation_dir / tool
+            status = "✅" if path.exists() else "❌"
+            print(f"   {status} {tool}")
+            
         # Check configuration
         print("\n⚙️  Configuration:")
         config_path = self.project_root / "config" / "memory_config.json"
@@ -152,7 +186,7 @@ class NeuralVaultLauncher:
         while True:
             self.show_menu()
             try:
-                choice = input("\n🎯 Select an option (0-7): ").strip()
+                choice = input("\n🎯 Select an option (0-9): ").strip()
                 
                 if choice == "1":
                     self.launch_neural_monitor()
@@ -165,15 +199,19 @@ class NeuralVaultLauncher:
                 elif choice == "5":
                     self.launch_web_scraper()
                 elif choice == "6":
-                    self.run_tests()
+                    self.launch_email_automation()
                 elif choice == "7":
+                    self.launch_schedule_automation()
+                elif choice == "8":
+                    self.run_tests()
+                elif choice == "9":
                     self.show_project_status()
                 elif choice == "0":
                     print("\n👋 Thanks for using NEURAL_CORE_VAULT!")
                     print("🚀 Keep building amazing AI systems!")
                     break
                 else:
-                    print("❌ Invalid option. Please select 0-7.")
+                    print("❌ Invalid option. Please select 0-9.")
                     
             except KeyboardInterrupt:
                 print("\n\n👋 Launch interrupted. Goodbye!")
