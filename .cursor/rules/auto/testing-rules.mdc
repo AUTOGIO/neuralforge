@@ -1,0 +1,48 @@
+---
+description: "Testing standards and pytest configuration rules"
+globs: ["**/test*.py", "**/tests/**/*.py", "**/*_test.py"]
+alwaysApply: false
+---
+
+# Testing Standards
+
+## Test Structure
+- Use pytest as the testing framework
+- Place tests in `tests/` directory
+- Use descriptive test class and method names
+- Include docstrings for test methods
+- Group related tests in test classes
+
+## Test Naming Conventions
+- Test files: `test_*.py` or `*_test.py`
+- Test classes: `Test*`
+- Test methods: `test_*`
+- Use descriptive names that explain what is being tested
+
+## Test Coverage
+- Aim for >80% code coverage
+- Test both success and failure cases
+- Include edge cases and error conditions
+- Test Apple Silicon specific features
+- Mock external dependencies when appropriate
+
+## Test Data Management
+- Use fixtures for common test data
+- Create test databases for integration tests
+- Use temporary files for file operations
+- Clean up test data after each test
+- Use factories for complex object creation
+
+## Performance Testing
+- Include performance benchmarks for critical functions
+- Test memory usage for large operations
+- Measure execution time for optimization
+- Test with different data sizes
+- Include stress testing for production scenarios
+
+## Mock and Stub Usage
+- Mock external API calls
+- Stub database connections for unit tests
+- Mock file system operations
+- Use pytest-mock for advanced mocking
+- Test error handling with mocked failures

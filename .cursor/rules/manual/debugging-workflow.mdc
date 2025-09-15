@@ -1,0 +1,40 @@
+---
+description: "Debugging and troubleshooting workflow for NeuralForge development"
+---
+
+# Debugging Workflow
+
+## Debugging Steps
+1. **Check Logs**: Always check application logs first
+2. **Verify Configuration**: Ensure all config files are correct
+3. **Test Dependencies**: Verify all required packages are installed
+4. **Check Environment**: Ensure environment variables are set
+5. **Test Isolation**: Test components in isolation
+
+## Common Issues
+- **PostgreSQL Connection**: Check database credentials and connection
+- **Apple Silicon Detection**: Verify architecture detection
+- **Memory Issues**: Check for memory leaks and large objects
+- **File Permissions**: Ensure proper file system permissions
+- **Network Issues**: Check internet connectivity for external APIs
+
+## Debugging Tools
+- Use `rich` for beautiful debug output
+- Include verbose logging options
+- Use `pdb` for interactive debugging
+- Include performance profiling
+- Use memory profiling tools
+
+## Error Reporting
+- Include stack traces in error messages
+- Provide context about what was happening
+- Include system information in error reports
+- Suggest possible solutions
+- Log errors for analysis
+
+## Testing Debug Scenarios
+- Test error conditions
+- Verify error handling works
+- Test recovery mechanisms
+- Include stress testing
+- Test edge cases

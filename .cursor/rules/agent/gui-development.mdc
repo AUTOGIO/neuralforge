@@ -1,0 +1,40 @@
+---
+description: "GUI development rules for wxPython and PyQt5 interfaces"
+---
+
+# GUI Development Rules
+
+## wxPython Guidelines
+- Use wxPython for file organizer interfaces
+- Follow wxPython best practices and patterns
+- Include proper event handling
+- Use sizers for layout management
+- Test on different screen resolutions
+
+## PyQt5 Guidelines
+- Use PyQt5 for web scraper interfaces
+- Follow PyQt5 design patterns
+- Include proper signal/slot connections
+- Use Qt Designer for complex layouts
+- Test on different platforms
+
+## GUI Best Practices
+- Keep interfaces simple and intuitive
+- Use consistent styling and colors
+- Include proper error handling and user feedback
+- Test with different screen sizes
+- Follow platform-specific design guidelines
+
+## Event Handling
+- Use proper event binding
+- Include error handling for events
+- Provide user feedback for long operations
+- Use threading for background operations
+- Test event handling thoroughly
+
+## Layout Management
+- Use appropriate layout managers
+- Ensure responsive design
+- Test on different screen sizes
+- Include proper spacing and alignment
+- Follow accessibility guidelines

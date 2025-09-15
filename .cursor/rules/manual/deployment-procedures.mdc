@@ -1,0 +1,41 @@
+---
+description: "Deployment and release procedures for NeuralForge"
+---
+
+# Deployment Procedures
+
+## Pre-Deployment Checklist
+- [ ] All tests passing
+- [ ] Documentation updated
+- [ ] Version bumped in pyproject.toml
+- [ ] CHANGELOG.md updated
+- [ ] Security scan completed
+
+## Release Process
+1. **Create Release Branch**: `git checkout -b release/v1.0.0`
+2. **Update Version**: Update version in pyproject.toml
+3. **Update Changelog**: Add new features and fixes
+4. **Run Tests**: Ensure all tests pass
+5. **Create Pull Request**: Review and merge
+6. **Create Tag**: `git tag v1.0.0`
+7. **Push Tag**: `git push origin v1.0.0`
+
+## GitHub Actions Deployment
+- Releases are automatically triggered by tags
+- PyPI deployment requires PYPI_API_TOKEN secret
+- Documentation is automatically deployed to GitHub Pages
+- All workflows must pass before deployment
+
+## Post-Deployment Verification
+- [ ] Package installs correctly: `pip install neuralforge`
+- [ ] All commands work: `neuralforge --help`
+- [ ] Documentation is accessible
+- [ ] GitHub Pages is updated
+- [ ] PyPI package is available
+
+## Rollback Procedures
+- Revert to previous tag if issues found
+- Update documentation if needed
+- Notify users of any issues
+- Fix issues and create patch release
+- Test thoroughly before re-deployment

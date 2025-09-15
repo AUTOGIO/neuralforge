@@ -1,0 +1,42 @@
+---
+description: "Neural Engine monitoring and Apple Silicon optimization rules"
+globs: ["**/core/neural*.py", "**/coreml*.py", "**/monitor*.py"]
+alwaysApply: false
+---
+
+# Neural Engine & Apple Silicon Rules
+
+## Neural Engine Monitoring
+- Use psutil for system metrics collection
+- Monitor CPU, Memory, and Neural Engine usage
+- Implement real-time dashboard with Rich
+- Include performance alerts for high usage
+- Log metrics for analysis and optimization
+
+## Apple Silicon Optimization
+- Detect Apple Silicon architecture automatically
+- Use MLX for mathematical operations when available
+- Optimize for 16-core Neural Engine (18 TOPS)
+- Consider 16GB unified memory constraints
+- Test performance on different Apple Silicon chips
+
+## Core ML Integration
+- Use coremltools for model conversion
+- Convert PyTorch models to Core ML format
+- Implement model benchmarking
+- Include fallback for non-Apple Silicon systems
+- Optimize models for Neural Engine
+
+## Performance Monitoring
+- Track inference times and accuracy
+- Monitor memory usage during model operations
+- Include performance comparison tools
+- Log performance metrics for analysis
+- Implement performance alerts
+
+## Error Handling
+- Handle missing Apple Silicon features gracefully
+- Provide clear error messages for unsupported operations
+- Include fallback mechanisms for compatibility
+- Log errors with context for debugging
+- Test on different macOS versions

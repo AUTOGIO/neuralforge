@@ -1,0 +1,48 @@
+---
+description: "AI Memory System rules for PostgreSQL integration and conversation storage"
+globs: ["**/ai/**/*.py", "**/memory*.py", "**/config/memory*.json"]
+alwaysApply: false
+---
+
+# AI Memory System Rules
+
+## PostgreSQL Integration
+- Use psycopg2-binary for database connections
+- Always use connection pooling for performance
+- Implement proper error handling for database operations
+- Use prepared statements to prevent SQL injection
+- Include transaction management for data consistency
+
+## Memory Entry Structure
+```python
+class MemoryEntry:
+    agent_name: str
+    task: str
+    response: str
+    success_rating: int
+    model_used: str
+    tokens_used: int
+    timestamp: datetime
+    metadata: dict
+```
+
+## Database Schema Standards
+- Use SERIAL for auto-incrementing IDs
+- Use TIMESTAMP DEFAULT CURRENT_TIMESTAMP for timestamps
+- Use JSONB for metadata storage
+- Include proper indexes for query performance
+- Use foreign keys for data integrity
+
+## Query Optimization
+- Use ILIKE for case-insensitive text search
+- Implement pagination for large result sets
+- Use LIMIT to prevent memory issues
+- Include proper error handling for query failures
+- Log query performance for optimization
+
+## Configuration Management
+- Store database credentials in environment variables
+- Use connection strings for different environments
+- Implement fallback to local storage if PostgreSQL unavailable
+- Include connection retry logic
+- Validate configuration on startup

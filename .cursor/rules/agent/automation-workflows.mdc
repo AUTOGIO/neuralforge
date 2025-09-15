@@ -1,0 +1,40 @@
+---
+description: "Automation workflow rules for n8n, Node-RED, and Raycast integration"
+---
+
+# Automation Workflow Rules
+
+## n8n Integration
+- Create JSON workflow templates in `scripts/n8n_workflows.json`
+- Use standard n8n node types and parameters
+- Include error handling and retry logic
+- Document workflow purpose and usage
+- Test workflows before deployment
+
+## Node-RED Integration
+- Create JSON flow templates in `scripts/node_red_flows.json`
+- Use standard Node-RED node types
+- Include proper wiring and data flow
+- Add debug nodes for troubleshooting
+- Document flow configuration
+
+## Raycast Commands
+- Create command templates in `scripts/raycast_commands.json`
+- Use proper Raycast command structure
+- Include command descriptions and preferences
+- Test commands in Raycast environment
+- Document command usage and parameters
+
+## Workflow Best Practices
+- Keep workflows simple and focused
+- Use descriptive names and descriptions
+- Include error handling and logging
+- Test workflows thoroughly
+- Document workflow dependencies
+
+## Integration Patterns
+- Use environment variables for configuration
+- Implement proper error handling
+- Include logging and monitoring
+- Test integration points
+- Document integration requirements
