@@ -13,6 +13,13 @@ PyQt5>=5.15.0
 customtkinter>=5.2.0
 pillow>=9.0.0
 
+# TUI Dependencies
+textual>=0.41.0
+
+# NLP Dependencies
+nltk>=3.8.0
+spacy>=3.7.0
+
 # AI/ML Dependencies
 torch>=2.0.0
 coremltools>=7.0.0
